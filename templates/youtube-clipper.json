@@ -2,11 +2,11 @@
 	"schemaVersion": "0.1.0",
 	"name": "YouTube",
 	"behavior": "create",
-	"noteContentFormat": "\n# {{schema:name}}\n\n![{{schema:name}}]({{url}})",
+	"noteContentFormat": "\n# {{title}}\n\n![{{title}}]({{url}})",
 	"properties": [
 		{
 			"name": "aliases",
-			"value": "[\\\"{{schema:name|replace:\\\"\\\\\"\\\":\\\"\\\\\\\\\"\\\"}}\\\"]",
+			"value": "[\\\"{{title|replace:\\\"\\\\\"\\\":\\\"\\\\\\\\\"\\\"}}\\\"]",
 			"type": "multitext"
 		},
 		{
@@ -16,28 +16,33 @@
 		},
 		{
 			"name": "author",
-			"value": "{{schema:author|wikilink}}",
+			"value": "{{author|wikilink}}",
 			"type": "multitext"
 		},
 		{
 			"name": "title",
-			"value": "{{schema:name}}",
+			"value": "{{title}}",
 			"type": "text"
 		},
 		{
 			"name": "published",
-			"value": "{{schema:uploadDate|date:YYYY-MM-DD}}",
+			"value": "{{published}}",
 			"type": "date"
 		},
 		{
 			"name": "image",
-			"value": "{{schema:thumbnailUrl|slice:0}}",
+			"value": "{{image}}",
 			"type": "text"
 		},
 		{
 			"name": "createdAt",
 			"value": "{{date}}",
 			"type": "date"
+		},
+		{
+			"name": "description",
+			"value": "{{description}}",
+			"type": "text"
 		},
 		{
 			"name": "tags",
@@ -48,6 +53,6 @@
 	"triggers": [
 		"https://www.youtube.com/watch?v="
 	],
-	"noteNameFormat": "{{schema:name|safe_name}}",
+	"noteNameFormat": "{{title|safe_name}}",
 	"path": "Inbox"
 }
