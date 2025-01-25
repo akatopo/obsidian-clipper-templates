@@ -16,7 +16,7 @@
 		},
 		{
 			"name": "author",
-			"value": "{{author|split:\\\", \\\"|wikilink|join}}",
+			"value": "{{author|split:\\\",\\\"|trim|wikilink|join}}",
 			"type": "multitext"
 		},
 		{
