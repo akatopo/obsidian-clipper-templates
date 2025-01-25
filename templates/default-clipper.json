@@ -35,6 +35,11 @@
 			"type": "text"
 		},
 		{
+			"name": "keywords",
+			"value": "{{meta:name:keywords|split:\\\",\\\"|trim|wikilink|join}}",
+			"type": "multitext"
+		},
+		{
 			"name": "tags",
 			"value": "",
 			"type": "multitext"
