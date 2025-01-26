@@ -1,22 +1,17 @@
-Templates for [Obsidian Web Clipper](https://github.com/obsidianmd/obsidian-clipper). Works with the templates in [my Obsidian vault](https://github.com/kepano/kepano-obsidian).
+Templates for [Obsidian Web Clipper](https://github.com/obsidianmd/obsidian-clipper), forked from [kepano/clipper-templates](https://github.com/kepano/clipper-templates).
+For personal use but might be useful to others after modification.
 
 To install templates, see instructions in the official [Obsidian Web Clipper documentation](https://help.obsidian.md/web-clipper/templates) repo.
 
-## Templates
+## Templates with meaningful changes from upstream
 
-Generic and schema-based templates
+### Generic and schema-based templates
 
-- [Recipes](/templates/recipes-clipper.json)
-- [Product](/templates/product-clipper.json) — e.g. Shopify
+- [Default](/templates/default-clipper.json)
 
-Specific Websites
+### Specific Websites
 
-- [Arxiv](/templates/arxiv-clipper.json)
-- [Goodreads](/templates/goodreads-clipper.json)
-- [Google Maps](/templates/google-maps-clipper.json)
-- [IMDB](/templates/imdb-clipper.json) 
-- [IMDB (reference view)](/templates/imdb-reference-clipper.json)
-- [Letterboxd](/templates/letterboxd-clipper.json)
-- [Redfin](/templates/redfin-clipper.json)
-- [Wikipedia](/templates/wikipedia-clipper.json)
+- [Danbooru](templates/danbooru-clipper.json)
+- [GitHub](templates/github-clipper.json)
+- [GitHub card](templates/github-card-clipper.json) (see [callout link snippet](https://github.com/akatopo/obsidian-snippets/blob/main/callout-link.css))
 - [Youtube](/templates/youtube-clipper.json)
