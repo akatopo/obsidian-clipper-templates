@@ -1,0 +1,53 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Github card",
+	"behavior": "create",
+	"noteContentFormat": "\n> [!link]\n> {{meta:property:og:title}}\n>\n> ![]({{meta:property:og:image}})\n>\n> [github.com]({{meta:property:og:url}})\n>\n> {{meta:property:og:description}}<wbr>\n",
+	"properties": [
+		{
+			"name": "aliases",
+			"value": "[\\\"{{title|replace:\\\"\\\\\"\\\":\\\"\\\\\\\\\"\\\"}}\\\", \\\"{{meta:name:octolytics-dimension-repository_nwo|split:'/'|slice:1|join|safe_name}}\\\"]",
+			"type": "multitext"
+		},
+		{
+			"name": "source",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "author",
+			"value": "{{meta:name:octolytics-dimension-user_login|safe_name|wikilink}}",
+			"type": "multitext"
+		},
+		{
+			"name": "published",
+			"value": "{{published}}",
+			"type": "date"
+		},
+		{
+			"name": "createdAt",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "description",
+			"value": "{{description}}",
+			"type": "text"
+		},
+		{
+			"name": "keywords",
+			"value": "{{selector:.topic-tag|wikilink|join}}",
+			"type": "multitext"
+		},
+		{
+			"name": "tags",
+			"value": "projects",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://github.com"
+	],
+	"noteNameFormat": "{{title|split:'/'|slice:1|join|safe_name}}",
+	"path": "Inbox"
+}
