@@ -48,6 +48,6 @@
 	"triggers": [
 		"https://github.com"
 	],
-	"noteNameFormat": "{{title|split:'/'|slice:1|join|safe_name}}",
+	"noteNameFormat": "{{title|split:'/'|slice:1|split:': '|join:' - '|safe_name}}",
 	"path": "Inbox"
 }
