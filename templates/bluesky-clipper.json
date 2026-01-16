@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "0.1.0",
+  "name": "bluesky",
+  "behavior": "create",
+  "noteContentFormat": "{{selectorHtml:[data-testid^=\"postThreadItem\"]|first|markdown}}\n\n{{selectorHtml:[data-expoimage=\"true\"]:not([data-testid=\"userAvatarImage\"]) img|join:\"\\n\\n\"|replace:\"img/feed_thumbnail\":\"img/feed_fullsize\"|markdown}}",
+  "properties": [
+    {
+      "name": "aliases",
+      "value": "[\\\"{{title|replace:\\\"\\\\\"\\\":\\\"\\\\\\\\\"\\\"}}\\\"]",
+      "type": "multitext"
+    },
+    {
+      "name": "source",
+      "value": "{{url}}",
+      "type": "text"
+    },
+    {
+      "name": "author",
+      "value": "{{selector:[data-testid^=\\\"postThreadItem\\\"]?data-testid|first|split:'-by-'|last|wikilink}}",
+      "type": "multitext"
+    },
+    {
+      "name": "published",
+      "value": "{{published}}",
+      "type": "date"
+    },
+    {
+      "name": "createdAt",
+      "value": "{{date}}",
+      "type": "date"
+    },
+    {
+      "name": "description",
+      "value": "{{description}}",
+      "type": "text"
+    },
+    {
+      "name": "keywords",
+      "value": "{{meta:name:keywords|split:\\\",\\\"|trim|wikilink|join}}",
+      "type": "multitext"
+    },
+    {
+      "name": "tags",
+      "value": "",
+      "type": "multitext"
+    }
+  ],
+  "triggers": [
+    "https://bsky.app/"
+  ],
+  "noteNameFormat": "Post by {{title|safe_name}}",
+  "path": "Inbox"
+}
