@@ -7,7 +7,7 @@
 	"noteContentFormat": "",
 	"properties": [
 		{
-			"name": "category",
+			"name": "categories",
 			"value": "[[Places]], [[Houses]]",
 			"type": "multitext"
 		},
@@ -47,7 +47,7 @@
 			"type": "number"
 		},
 		{
-			"name": "location",
+			"name": "coordinates",
 			"value": "\\\"{{schema:[1].geo.latitude}}\\\",\\\"{{schema:[1].geo.longitude}}\\\"",
 			"type": "multitext"
 		},

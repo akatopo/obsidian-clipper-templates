@@ -7,9 +7,9 @@
 	"noteContentFormat": "{{description}}",
 	"properties": [
 		{
-			"name": "category",
+			"name": "categories",
 			"value": "[[Products]]",
-			"type": "text"
+			"type": "multitext"
 		},
 		{
 			"name": "created",
