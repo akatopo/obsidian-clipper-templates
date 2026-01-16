@@ -11,6 +11,7 @@ To install templates, see instructions in the official [Obsidian Web Clipper doc
 
 ### Specific Websites
 
+- [Bluesky](templates/bluesky-clipper.json)
 - [Danbooru](templates/danbooru-clipper.json)
 - [GitHub](templates/github-clipper.json)
 - [GitHub card](templates/github-card-clipper.json) (see [callout link snippet](https://github.com/akatopo/obsidian-snippets/blob/main/callout-link.css))
