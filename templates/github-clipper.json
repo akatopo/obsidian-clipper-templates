@@ -6,7 +6,7 @@
 	"properties": [
 		{
 			"name": "aliases",
-			"value": "[\\\"{{title|replace:\\\"\\\\\"\\\":\\\"\\\\\\\\\"\\\"}}\\\", \\\"{{meta:name:octolytics-dimension-repository_nwo|split:'/'|slice:1|join|safe_name}}\\\"]",
+			"value": "[\\\"{{title|replace:\\\"\\\\\"\\\":\\\"\\\\\\\\\"\\\"}}\\\", \\\"{{meta:name:current-repo-nwo|split:'/'|slice:1|join|safe_name}}\\\"]",
 			"type": "multitext"
 		},
 		{
@@ -16,7 +16,7 @@
 		},
 		{
 			"name": "author",
-			"value": "{{meta:name:octolytics-dimension-user_login|safe_name|wikilink}}",
+			"value": "{{meta:name:current-repo-nwo|split:'/'|slice:0,1|join|safe_name|wikilink}}",
 			"type": "multitext"
 		},
 		{
