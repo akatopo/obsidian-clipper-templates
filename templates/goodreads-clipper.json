@@ -2,18 +2,21 @@
 	"schemaVersion": "0.1.0",
 	"name": "Goodreads",
 	"behavior": "create",
-	"noteNameFormat": "{{selector:.BookPageTitleSection__title h1}}",
-	"path": "References",
-	"noteContentFormat": "{{selector:.BookPageMetadataSection__description}}",
+	"noteContentFormat": "\n> [!link]\n> {{selector:.BookPageTitleSection__title h1}}\n>\n> ![]({{selector:.BookCover__image img?src|first}})\n>\n> []()\n>\n> {{selector:.ContributorLink__name|unique|wikilink|join}}<wbr>\n\n## Description\n\n{{selector:.BookPageMetadataSection__description}}",
 	"properties": [
-        {
-            "name": "categories",
-            "value": "[[Books]]",
-            "type": "multitext"
-        },
 		{
 			"name": "title",
 			"value": "{{selector:.BookPageTitleSection__title h1}}",
+			"type": "text"
+		},
+		{
+			"name": "aliases",
+			"value": "[\\\"{{title|replace:\\\"\\\\\"\\\":\\\"\\\\\\\\\"\\\"}}\\\"]",
+			"type": "multitext"
+		},
+		{
+			"name": "source",
+			"value": "{{url}}",
 			"type": "text"
 		},
 		{
@@ -33,17 +36,12 @@
 		},
 		{
 			"name": "year",
-			"value": "{{selector:p[data-testid='publicationInfo']|split:\" \"|last}}",
+			"value": "{{selector:p[data-testid='publicationInfo']|split:\\\" \\\"|last}}",
 			"type": "number"
 		},
 		{
 			"name": "scoreGr",
 			"value": "{{selector:.RatingStatistics__rating|first|round:2}}",
-			"type": "number"
-		},
-		{
-			"name": "rating",
-			"value": "",
 			"type": "number"
 		},
 		{
@@ -62,17 +60,24 @@
 			"type": "text"
 		},
 		{
-			"name": "created",
+			"name": "createdAt",
 			"value": "{{date}}",
 			"type": "date"
 		},
 		{
 			"name": "tags",
-			"value": "books, to-read",
+			"value": "books",
+			"type": "multitext"
+		},
+		{
+			"name": "cssclasses",
+			"value": "[\\\"callout-link-ratio-3-4\\\", \\\"callout-link-max-w-20\\\"]",
 			"type": "multitext"
 		}
 	],
 	"triggers": [
 		"https://www.goodreads.com/book/"
-	]
+	],
+	"noteNameFormat": "{{selector:.BookPageTitleSection__title h1|safe_name}}",
+	"path": "Inbox"
 }
