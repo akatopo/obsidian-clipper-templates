@@ -15,4 +15,5 @@ To install templates, see instructions in the official [Obsidian Web Clipper doc
 - [Danbooru](templates/danbooru-clipper.json)
 - [GitHub](templates/github-clipper.json)
 - [GitHub card](templates/github-card-clipper.json) (see [callout link snippet](https://github.com/akatopo/obsidian-snippets/blob/main/callout-link.css))
+- [Goodreads](templates/goodreads-clipper.json) (see [callout link snippet](https://github.com/akatopo/obsidian-snippets/blob/main/callout-link.css))
 - [Youtube](/templates/youtube-clipper.json)
